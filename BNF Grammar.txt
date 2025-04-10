@@ -1,0 +1,50 @@
+Based on Python, MATLAB, and other scripting languages
+
+<program> ::= <statement> | <program> <statement>
+
+<statement> ::= <assignment> | <if_statement> | <print_statement> 
+                | <while_loop> | <do_while_loop> | <for_loop> 
+                | <function_definition> | <function_call> | <return_statement>
+
+<assignment> ::= <variable> "<-" <expression>
+
+<if_statement> ::= "if" <condition> "then do" <statement> ["else do" <statement>]?
+
+<while_loop> ::= "while" <condition> "do" <statement>
+
+<do_while_loop> ::= "do" <statement> "while" <condition>
+
+<for_loop> ::= "for " <variable> " in " ["[" [<number> ", "]* <number> "] do" <statement>]
+                                      | ["(" <expression> ":" <expression> ":" <expression> ") do" <statement>]
+
+<print_statement> ::= "print(" <expression> ")"
+
+<function_definition> ::= "function" <variable> "(" [[<variable> ", "]* <variable>]? ") do" <statement>
+
+<return_statement> ::= "return " <expression>
+
+<condition> ::= "(" <expression> <comparison_operator> <expression> ")"
+
+<expression> ::= <term> | <expression> <binary_operator> <term>
+
+<term> ::= <number> | <variable> | <function_call> | "(" <expression> ")"
+
+<number> ::= "-"? <digit> <number_trail>?
+
+<number_trail> ::= <digit> | <digit> <number_trail>
+
+<string> ::= '"' .* '"'
+
+<variable> ::= <letter> <id_tail>?
+
+<id_tail> ::= <letter> <id_tail>? | <digit> <id_tail>?
+
+<function_call> ::= <variable> "(" [[<variable> ", "]* <variable>]? ")"
+
+<comparison_operator> ::= "==" | "!=" | "<" | ">" | "<=" | ">="
+
+<binary_operator> ::= "+" | "-" | "*" | "/"
+
+<digit> ::= "0" | "1" | "2" | ... | "9"
+
+<letter> ::= "a" | "b" | ... | "y" | "z" | "A" | "B" | ... | "Y" | "Z"
