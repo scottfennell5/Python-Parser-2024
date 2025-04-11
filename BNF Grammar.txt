@@ -19,7 +19,7 @@ Based on Python, MATLAB, and other scripting languages
 
 <print_statement> ::= "print(" <expression> ")"
 
-<function_definition> ::= "function" <variable> "(" [[<variable> ", "]* <variable>]? ") do" <statement>
+<function_definition> ::= "function" <variable> "(" [[<variable> ", "]* <variable>]? ") do" <statement> <return_statement>?
 
 <return_statement> ::= "return " <expression>
 
